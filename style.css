@@ -1,12 +1,23 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:200';
+
+/*general*/
+:root{
+  --backgound-color: #000;
+  --text-shadow: #03e9f4;
+  --text-white: #fafafa;
+
+  --icon-shake-color1: #00a8b1;
+  --icon-shake-color2: #aa0000;
+}
 
 html,
 body {
   font-family: 'Roboto Mono', monospace;
-  background: #212121;
-  height: 100%;
+  background: var(--backgound-color);
+  height: 95%;
 }
 
+/*start container*/
 .start_container {
   height: 100%;
   width: 100%;
@@ -18,33 +29,93 @@ body {
 .start_container .start_name {
   font-size: 100px;
   position: static;
-  text-shadow:0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
+  text-shadow:0 0 5px var(--text-shadow),
+              0 0 25px var(--text-shadow),
+              0 0 50px var(--text-shadow),
+              0 0 100px var(--text-shadow);
 }
 
 .start_container .start_name:hover {
   position: relative;
   top: 10%;
-  color: #212121;
-  color: #fff;
-
+  color: var(--text-white);
+  text-transform: uppercase;
+  transition: all ease-out 0.7s;
 }
 
 .start_container .start_surname {
   font-weight: 100;
   font-size: 100px;
-  color: #fafafa;
+  color: var(--text-white);
   position: relative;
   top: 10%;
-  text-shadow:0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
+  text-transform: uppercase;
+  text-shadow:0 0 5px var(--text-shadow),
+              0 0 25px var(--text-shadow),
+              0 0 50px var(--text-shadow),
+              0 0 100px var(--text-shadow);
 }
 
 .start_container .start_surname:hover {
   position: static;
-  color: #212121;
+  color: var(--backgound-color);
+  text-transform: none;
+  transition: all ease-out 0.7s;
+}
+
+/*socjal*/
+.socialbtns li {
+  list-style: none outside none;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+a:hover{
+  text-decoration: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+  bottom: 8px;
+  animation: icon_shake 500ms 2;
+}
+
+@keyframes icon_shake {
+  0% {
+    text-shadow: 5px 4px var(--icon-shake-color1), -5px -6px var(--icon-shake-color2);
+  }
+  25% {
+    text-shadow: -5px -6px var(--icon-shake-color1), 5px 4px var(--icon-shake-color2);
+  }
+  50% {
+    text-shadow: 5px -4px var(--icon-shake-color1), -8px 4px var(--icon-shake-color2);
+  }
+  75% {
+    text-shadow: -8px -4px var(--icon-shake-color1), -5px -4px var(--icon-shake-color2);
+  }
+  100% {
+    text-shadow: -5px 0 var(--icon-shake-color1), 5px -4px var(--icon-shake-color2);
+  }
+}
+
+.socialbtns .fa {
+  color: var(--text-white);
+  text-shadow: 1px 1px 0px var(--backgound-color),
+      1px -1px 0px var(--backgound-color),
+      -1px 1px 0px var(--backgound-color),
+      -1px -1px 0px var(--backgound-color);
+  transition: all ease-out 0.8s;
+}
+
+.socialbtns .fa:hover {
+  color: var(--backgound-color);
+  text-shadow: 1px 1px 0px var(--text-white),
+      1px -1px 0px var(--text-white),
+      -1px 1px 0px var(--text-white),
+      -1px -1px 0px var(--text-white);
+  transition: all ease 0.8s;
+
 }
