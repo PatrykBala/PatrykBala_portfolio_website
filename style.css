@@ -26,7 +26,7 @@ body {
   display: flex;
 }
 
-.start_container .start_name {
+.start_container .name {
   font-size: 100px;
   position: static;
   text-shadow:0 0 5px var(--text-shadow),
@@ -35,7 +35,7 @@ body {
               0 0 100px var(--text-shadow);
 }
 
-.start_container .start_name:hover {
+.start_container .name:hover {
   position: relative;
   top: 10%;
   color: var(--text-white);
@@ -43,7 +43,7 @@ body {
   transition: all ease-out 0.7s;
 }
 
-.start_container .start_surname {
+.start_container .surname {
   font-weight: 100;
   font-size: 100px;
   color: var(--text-white);
@@ -56,14 +56,18 @@ body {
               0 0 100px var(--text-shadow);
 }
 
-.start_container .start_surname:hover {
+.start_container .surname:hover {
   position: static;
   color: var(--backgound-color);
   text-transform: none;
   transition: all ease-out 0.7s;
 }
 
-/*socjal*/
+.start_container .profession {
+  color: var(--text-white);
+}
+
+/*social*/
 .socialbtns li {
   list-style: none outside none;
   display: inline-block;
@@ -117,5 +121,5 @@ a:hover{
       -1px 1px 0px var(--text-white),
       -1px -1px 0px var(--text-white);
   transition: all ease 0.8s;
-
 }
+
