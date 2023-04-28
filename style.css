@@ -77,15 +77,17 @@ body {
   font-size: 15px;
   letter-spacing: 0.2em;
   color: var(--text-white);
-  text-shadow: 2px 3px 5px var(--text-shadow);
+  text-shadow: 10px 15px 5px var(--text-shadow);
   animation: skew-x-shake 5s infinite;
   padding-bottom: 30px;
 }
 
 .bottom_container .profession:hover {
-  letter-spacing: 0.5em;
-  transform: rotate(45deg) translate(450%, 0);
-  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  letter-spacing: 0.4em;
+  font-size: 17px;
+  transition: 3s;
+  color: var(--text-shadow);
+  text-shadow: 20px 20px 5px var(--icon-shake-color2);
 }
 
 @keyframes skew-x-shake {
@@ -119,7 +121,7 @@ button {
   border-radius: 5px;
   letter-spacing: 4px;
   overflow: hidden;
-  transition: 0.5s;
+  transition: 1s;
   cursor: pointer;
   text-transform: uppercase;
 }
@@ -130,7 +132,7 @@ button:hover {
     box-shadow: 0 0 5px var(--text-shadow),
                 0 0 25px var(--text-shadow),
                 0 0 50px var(--text-shadow),
-                0 0 100px var(--text-shadow);
+                0 0 100px var(--icon-shake-color2);
 }
 
 /*social*/
