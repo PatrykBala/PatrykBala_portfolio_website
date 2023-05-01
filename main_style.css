@@ -15,7 +15,7 @@ body {
   font-family: 'Roboto Mono', monospace;
   background: var(--backgound-color);
   height: 90%;
-  color: #fafafa;
+  color: var(--text-white);
 }
 
 h1 {
@@ -23,7 +23,80 @@ h1 {
   font-weight: 700;
 }
 
-nav img {
+/*header logo*/
+header nav {
+  position: relative;
+  display: flex;
+}
+
+header nav button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: var(--backgound-color);
+  border: var(--icon-shake-color1);
+  border-style: dotted;
+  border-radius: 10px;
+  border-width: 3px;
+
+  font-family: "News Cycle", sans-serif;
+  color: var(--icon-shake-color1);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header nav button:hover {
+  color: var(--text-shadow);
+}
+
+header nav .logo .logo_top .logo_top_text {
+  padding: 0;
+  margin: 0;
+}
+
+header nav .logo .logo_btm .logo_btm_text {
+  padding: 0;
+  margin: 0;
+  font-size: xx-large;
+}
+
+/*header text*/
+header nav ul {
+  /* position: absolute; */
+}
+
+header nav ul li {
+  display: block;
+  position: relative;
+  text-align: right;
+  color: var(--text-white);
+  padding-left: 50px;
+  padding-right: 100px;
+}
+
+header nav ul li:hover {
+  color: var(--text-shadow);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+}
+
+header nav ul li a{
+  color: var(--icon-shake-color1);
+  font-size: large;
+}
+
+/*header nav description*/
+header nav .nav_desc {
+  padding-top: 5%;
+  color: var(--text-white);
+}
+
+/*image*/
+section img {
   width: 20%;
   justify-content: center;
   align-items: center;
@@ -36,6 +109,7 @@ nav img {
   position: absolute;
 }
 
+/*Projects*/
 .img span:first-child, .img span:nth-child(2) {
   top: 0;
 }
