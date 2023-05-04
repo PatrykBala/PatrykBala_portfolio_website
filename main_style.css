@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:200';
+@import 'https://fonts.googleapis.com/css2?family=Orbitron&family=Raleway:wght@200;300;400;500;600&family=Roboto+Condensed:wght@300&display=swap';
 
 /*general*/
 :root{
@@ -15,7 +15,8 @@
 
 html,
 body {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1em;
   background: var(--backgound-color);
   height: 90%;
   color: var(--text-white);
@@ -42,8 +43,8 @@ header nav button {
   border-width: 2px;
   margin-left: 2%;
   margin-top: 2%;
-
-  font-family: "News Cycle", sans-serif;
+  
+  font-family: 'Orbitron', sans-serif;
   color: var(--icon-shake-color1);
   text-transform: uppercase;
   font-weight: bold;
@@ -130,21 +131,20 @@ margin-left: 30%;
 
 .start_text h1 {
   color: var(--text-white);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   font-weight: 700;
   font-size: 40px;
   padding: 0;
   margin: 0;
-  font-family: "News Cycle", sans-serif;
   position: relative;
   left: 5%;
 }
 
 .start_text h1:hover {
-  color: var(--text-blue-console2);
+  color: var(--icon-shake-color2);
   transition: all ease-out 5s;
   letter-spacing: normal;
-  text-shadow: 10px 15px 20px var(--text-blue-console1);
+  text-shadow: 10px 15px 20px var(--icon-shake-color2);
   animation: skew-y-shake 5s infinite;
 }
 
@@ -160,7 +160,8 @@ margin-left: 30%;
   30% { color: var(--text-grey);}
   40% { color: var(--text-grey);}
   50% { color: var(--text-grey);}
-  60% { color: var(--icon-shake-color2);}
+  60% { color: var(--text-blue-console2);
+    text-shadow: 10px 15px 5px var(--icon-shake-color2);}
   70% { color: var(--text-grey);}
   80% { color: var(--text-grey);}
   90% { color: var(--text-grey);}
@@ -181,7 +182,8 @@ margin-left: 30%;
   40% { color: var(--text-grey);}
   50% { color: var(--text-grey);}
   60% { color: var(--text-grey);}
-  70% { color: var(--icon-shake-color2);}
+  70% { color: var(--text-blue-console2);
+    text-shadow: 10px 15px 5px var(--icon-shake-color2);}
   80% { color: var(--text-grey);}
   90% { color: var(--text-grey);}
   100% { color: var(--text-grey);}
@@ -194,16 +196,144 @@ margin-left: 30%;
 /*about*/
 .about {
 margin-top: 15%;
+text-align: center;
+display: block;
+}
+
+.about h1 {
+  position: relative;
+  z-index: 1;
+}
+
+.about h1:before{
+  border-top: 1px solid var(--text-shadow);
+  content: "";
+  margin: 0 auto; /* centers the line to the full width specified */
+  position: absolute; /* positioning must be absolute here */
+  top: 70%;
+  left: 20%;
+  right: 0%;
+  width: 50%;
+}
+
+.about picture {
+  position: relative;
+  right: 35%;
+}
+
+.about p {
+  position: relative;
+  bottom: 250px;
+  left: 30%;
+  text-align: justify;
+  width: 58%;
 }
 
 .about img {
-  width: 20%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  --s: 15px; /* size of the frame */
+  --b: 2px; /* border thickness */
+  --w: 250px; /* width of the image */
+  --c: var(--text-shadow);
+  --g: var(--c) var(--b), #0000 0 calc(100% - var(--b)), var(--c) 0;
+
+  width: var(--w);
+  padding: calc(2 * var(--s));
+  transition: 0.5s;
+  outline: calc(var(--w) / 2) solid #0005;
+  outline-offset: calc(var(--w) / -2 - 2 * var(--s));
+  background: linear-gradient(var(--g)) 50%/100% var(--i, 100%) no-repeat,
+    linear-gradient(90deg, var(--g)) 50% / var(--i, 100%) 100% no-repeat;
+  
+  cursor: pointer;
+}
+
+.about img:hover {
+  --i: calc(100% - 2 * var(--s));
+
+  outline: var(--b) solid var(--c);
+  outline-offset: calc(var(--s) / -2);
+}
+
+/*work*/
+.work {
+  position: relative;
+  right: 30%;
+  text-align: center;
+}
+
+.work h1 {
+  position: relative;
+  z-index: 1;
+}
+
+.work h1:before{
+  border-top: 1px solid var(--text-shadow);
+  content: "";
+  margin: 0 auto; /* centers the line to the full width specified */
+  position: absolute; /* positioning must be absolute here */
+  top: 70%;
+  left: 30%;
+  right: 0%;
+  width: 50%;
+}
+
+.work button{
+  padding: 15px 50px;
+  color: var(--icon-shake-color2);
+  position: relative;
+  float: right;
+  background: transparent;
+  border-color: var(--icon-shake-color2);
+  text-transform: lowercase;
+}
+
+.work button::before {
+  content: '';
+  position: absolute;
+  bottom: 45%;
+  left: 20px;
+  width: 100%;
+  height: 1px;
+  background: var(--text-shadow);
+  display: inline-block;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+}
+
+.work button:hover {
+  text-transform: uppercase;
+  padding: 15px 38px;
+}
+
+.work button:hover::before {
+  transform-origin: right top;
+  transform: scale(1, 1);
 }
 
 /*project*/
+.project {
+  margin-top: 15%;
+  position: relative;
+  text-align: center;
+}
+
+.project h1 {
+  position: relative;
+  z-index: 1;
+}
+
+.project h1:before{
+  border-top: 1px solid var(--text-shadow);
+  content: "";
+  margin: 0 auto; /* centers the line to the full width specified */
+  position: absolute; /* positioning must be absolute here */
+  top: 70%;
+  left: 20%;
+  right: 0%;
+  width: 50%;
+}
+
 .img span {
   width: 50%;
   height: 50%;
@@ -289,4 +419,9 @@ margin-top: 15%;
   font-size: 0.8rem;
   margin-top: 0.3rem;
   display: block;
+}
+
+/*contact*/
+footer {
+  margin-top: 15%;
 }
