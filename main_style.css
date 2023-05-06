@@ -283,7 +283,8 @@ display: block;
   text-align: justify;
 }
 
-.work button{
+.work button, 
+.contact button{
   padding: 15px 50px;
   color: var(--icon-shake-color2);
   position: relative;
@@ -293,7 +294,8 @@ display: block;
   text-transform: lowercase;
 }
 
-.work button::before {
+.work button::before,
+.contact button::before  {
   content: '';
   position: absolute;
   bottom: 45%;
@@ -307,12 +309,14 @@ display: block;
   transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
 }
 
-.work button:hover {
+.work button:hover,
+.contact button:hover {
   text-transform: uppercase;
   padding: 15px 38px;
 }
 
-.work button:hover::before {
+.work button:hover::before,
+.contact button:hover::before {
   transform-origin: right top;
   transform: scale(1, 1);
 }
@@ -428,6 +432,49 @@ display: block;
 }
 
 /*contact*/
+.contact {
+  margin-top: 15%;
+  position: relative;
+  right: 30%;
+  text-align: center;
+}
+
+.contact h1 {
+  position: relative;
+  left: 10%;
+  z-index: 1;
+}
+
+.contact h1:before{
+  border-top: 1px solid var(--text-shadow);
+  content: "";
+  margin: 0 auto; /* centers the line to the full width specified */
+  position: absolute; /* positioning must be absolute here */
+  top: 70%;
+  left: 20%;
+  right: 0%;
+  width: 50%;
+}
+
+.contact .contact_button {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--icon-shake-color2);
+  padding: 3px 7px 3px 7px;
+  border-top: 2px solid var(--icon-shake-color2);
+  border-right: 2px solid var(--icon-shake-color2);
+  border-bottom: 2px solid var(--icon-shake-color2);
+  border-left: 2px solid var(--icon-shake-color2);
+ }
+
+/*footer*/
 footer {
-  background-color: var(--text-shadow);
+  margin-top: 10%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+
+footer .a:link, a:visited {
+  color: var(--icon-shake-color1);
+  text-decoration: none;
 }
