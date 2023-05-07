@@ -140,14 +140,6 @@ margin-left: 30%;
   left: 5%;
 }
 
-.start_text h1:hover {
-  color: var(--icon-shake-color2);
-  transition: all ease-out 5s;
-  letter-spacing: normal;
-  text-shadow: 10px 15px 20px var(--icon-shake-color2);
-  animation: skew-y-shake 5s infinite;
-}
-
 .start_text h2, h3, h4 {
   color: var(--text-grey);
   animation: color-change1 20s infinite;
@@ -243,8 +235,6 @@ display: block;
   outline-offset: calc(var(--w) / -2 - 2 * var(--s));
   background: linear-gradient(var(--g)) 50%/100% var(--i, 100%) no-repeat,
     linear-gradient(90deg, var(--g)) 50% / var(--i, 100%) 100% no-repeat;
-  
-  cursor: pointer;
 }
 
 .about img:hover {
@@ -281,6 +271,16 @@ display: block;
   position: relative;
   left: 35%;
   text-align: justify;
+  width: 80%;
+}
+
+.work h3 {
+  margin-top: 5%;
+}
+
+.work .work_right_info {
+  position: relative;
+  left: 50%;
 }
 
 .work button, 
@@ -291,7 +291,6 @@ display: block;
   float: bottom;
   background: transparent;
   border-color: var(--icon-shake-color2);
-  text-transform: lowercase;
 }
 
 .work button::before,
@@ -307,12 +306,6 @@ display: block;
   transform-origin: right top;
   transform: scale(0, 1);
   transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
-}
-
-.work button:hover,
-.contact button:hover {
-  text-transform: uppercase;
-  padding: 15px 38px;
 }
 
 .work button:hover::before,
@@ -378,7 +371,7 @@ display: block;
   transform-style: preserve-3d;
 }
 #grid > a:hover {
-  cursor: pointer;
+  cursor: crosshair;
 }
 #grid > a:hover .title:after {
   background-position: 0% 100%;
@@ -445,6 +438,11 @@ display: block;
   z-index: 1;
 }
 
+.contact h2, .contact p {
+  position: relative;
+  left: 10%;
+}
+
 .contact h1:before{
   border-top: 1px solid var(--text-shadow);
   content: "";
@@ -457,14 +455,16 @@ display: block;
 }
 
 .contact .contact_button {
+  position: relative;
+  left: 10%;
   text-decoration: none;
   background-color: transparent;
-  color: var(--icon-shake-color2);
+  color: var(--icon-shake-color1);
   padding: 3px 7px 3px 7px;
-  border-top: 2px solid var(--icon-shake-color2);
-  border-right: 2px solid var(--icon-shake-color2);
-  border-bottom: 2px solid var(--icon-shake-color2);
-  border-left: 2px solid var(--icon-shake-color2);
+  border-top: 2px solid var(--icon-shake-color1);
+  border-right: 2px solid var(--icon-shake-color1);
+  border-bottom: 2px solid var(--icon-shake-color1);
+  border-left: 2px solid var(--icon-shake-color1);
  }
 
 /*footer*/
@@ -475,6 +475,6 @@ footer {
 }
 
 footer .a:link, a:visited {
-  color: var(--icon-shake-color1);
+  color: var(--icon-shake-color2);
   text-decoration: none;
 }
