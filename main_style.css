@@ -11,6 +11,10 @@
 
   --icon-shake-color1: #00a8b1;
   --icon-shake-color2: #aa0000;
+
+  --skill-column-color1: #2187e7;  
+  --skill-column-color2: #9ACD32;  
+  --skill-column-color3: #FF4500; 
 }
 
 html,
@@ -313,6 +317,140 @@ display: block;
   transform-origin: right top;
   transform: scale(1, 1);
 }
+
+/*skills*/
+.skills {
+  margin-top: 15%;
+  position: relative;
+}
+
+.skills h1 {
+  position: relative;
+  left: 10%;
+  z-index: 1;
+}
+
+.skills h2, .skills p {
+  position: relative;
+  left: 10%;
+}
+
+.skills h1:before{
+  border-top: 1px solid var(--text-shadow);
+  content: "";
+  margin: 0 auto; /* centers the line to the full width specified */
+  position: absolute; /* positioning must be absolute here */
+  top: 70%;
+  right: 55%;
+  width: 50%;
+}
+
+.skills h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+  padding: 5px;
+  text-align: center;
+  background: transparent;
+} 
+
+h2.first_column_title {
+  border: 1px solid var(--skill-column-color1);  
+  box-shadow: 0px 0px 40px -5px var(--skill-column-color1);
+  color: var(--skill-column-color1);
+  text-shadow: 1px 1px 5px var(--backgound-color), 0 0 10px var(--skill-column-color1), 0 0 20px var(--skill-column-color1);
+}
+
+h2.second_column_title {
+  border: 1px solid var(--skill-column-color2);  
+  box-shadow: 0px 0px 40px -5px var(--skill-column-color2);
+  color: var(--skill-column-color2);
+  text-shadow: 1px 1px 5px var(--backgound-color), 0 0 10px var(--skill-column-color2), 0 0 20px var(--skill-column-color2);
+}
+
+h2.third_column_title {
+  border: 1px solid var(--skill-column-color3);  
+  box-shadow: 0px 0px 40px -5px var(--skill-column-color3);
+  color: var(--skill-column-color3);
+  text-shadow: 1px 1px 5px var(--backgound-color), 0 0 10px var(--skill-column-color3), 0 0 20px var(--skill-column-color3);
+}
+ 
+.skills_container {
+  width: 90%;
+  margin: 0 auto; 
+  overflow: hidden;
+}
+
+.skills_column {
+  width: 22%;
+  margin: 0 5%;
+  position: relative;
+  float: left;
+  font-size: 12px;
+} 
+
+.skill { 
+  list-style: none; 
+  padding-top: 30px;
+}
+
+.skill li { 
+  margin-bottom: 20%; 
+  background: var(--backgound-color); 
+  height: 8px; 
+  border-radius: 50px;
+  border-left: 2px solid var(--text-shadow); 
+  border-top: 1px solid var(--text-shadow); 
+  border-right: 2px solid var(--text-shadow); 
+  border-bottom: 1px solid var(--text-shadow);  
+}
+
+.skill li em { 
+  position: relative; 
+  font-style: normal;
+  text-align: center;
+  top: -20px;
+}
+
+.first_column_line { 
+  height: 3px; 
+  margin: 2px 0; 
+  background: var(--skill-column-color1); 
+  position: absolute;
+  box-shadow: 0px 0px 10px 1px var(--skill-column-color1);
+}
+.second_column_line { 
+  height: 3px; 
+  margin: 2px 0; 
+  background: var(--skill-column-color2); 
+  position: absolute;
+  box-shadow: 0px 0px 10px 1px var(--skill-column-color2);
+}
+.third_column_line { 
+  height: 3px; 
+  margin: 2px 0; 
+  background: var(--skill-column-color3); 
+  position: absolute;
+  box-shadow: 0px 0px 10px 1px var(--skill-column-color3);
+}
+
+/*skills - expertise*/
+.html        {width:80%;}
+.css         {width:75%;}
+.javascript  {width:50%;}
+.sql         {width:70%;}
+.python      {width:30%;}
+
+/*skills - tools*/
+.docker     {width:80%;}
+.ovhcloud   {width:60%;}
+.ansible    {width:40%;}
+
+/*skills - software*/
+.linux      {width:80%;}
+.visual     {width:30%;}
+.intellij   {width:70%;}
+.prtg       {width:50%;}
+.postman    {width:60%;}
 
 /*project*/
 .project {
