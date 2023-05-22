@@ -24,6 +24,7 @@ body {
   background: var(--backgound-color);
   height: 90%;
   color: var(--text-white);
+  text-emphasis: "\302E" var(--icon-shake-color1);
 }
 
 /*header*/
@@ -61,24 +62,27 @@ header nav button:hover {
 header nav .logo .logo_top .logo_top_text {
   padding: 0;
   margin: 0;
+  text-emphasis: none;
 }
 
 header nav .logo .logo_btm .logo_btm_text {
   padding: 0;
   margin: 0;
   font-size: xx-large;
+  text-emphasis: none;
 }
 
 /*header text*/
 header nav ul {
-  position: relative;
-  margin-top: 3%;
+  position: absolute;
+  left: 10%;
+  margin-top: 2%;
 }
 
 header nav ul li {
   display: block;
   position: relative;
-  text-align: right;
+  text-align: left;
   color: var(--text-white);
   padding-left: 50px;
   padding-right: 100px;
@@ -97,10 +101,22 @@ header nav ul li a{
   font-size: large;
 }
 
-/*header nav description*/
-header nav .nav_desc {
-  padding-top: 5%;
-  color: var(--text-white);
+/* Animation */
+.nav_text p {
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* text animation */
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+/* cursor animations */
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
 }
 
 /*start text (first section)*/
@@ -335,6 +351,7 @@ display: block;
   left: 10%;
 }
 
+
 .skills h1:before{
   border-top: 1px solid var(--text-shadow);
   content: "";
@@ -411,12 +428,17 @@ h2.third_column_title {
   top: -20px;
 }
 
+.first_column_title, .second_column_title, .third_column_title {
+  text-emphasis: none;
+}
+
 .first_column_line { 
   height: 3px; 
   margin: 2px 0; 
   background: var(--skill-column-color1); 
   position: absolute;
   box-shadow: 0px 0px 10px 1px var(--skill-column-color1);
+  text-emphasis: 0;
 }
 .second_column_line { 
   height: 3px; 
