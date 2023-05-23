@@ -43,11 +43,11 @@
             </button>
 
             <ul>
-                <li><a>01.</a>about</li>
-                <li><a>02.</a>work</li>
-                <li><a>03.</a>skills</li>
-                <li><a>04.</a>project</li>
-                <li><a>05.</a>contact</li>
+                <li><a href="#section-1">01.about</a></li>
+                <li><a href="#section-2">02.skills</a></li>
+                <li><a href="#section-3">03.work</a></li>
+                <li><a href="#section-4">04.project</a></li>
+                <li><a href="#section-5">05.contact</a></li>
             </ul>
         </nav>
     </header>
@@ -61,7 +61,7 @@
     </section>
 
     <section class="about">
-        <h1>01.About Me</h1>
+        <h1 id="section-1">01.About Me</h1>
         <picture>
             <img src="img/Patryk_Bala.jpg">
         </picture>
@@ -71,28 +71,8 @@
         <p> I would like to work closer to the codes in the future. Still looking for my way in IT.</p>
     </section>
 
-    <section class="work">
-        <h1>02.My Work</h1>
-        <p>I work as a Software Implementation and Support Specialist. I have experience with Linux and Windows systems, where I implement software written in Java and C++ to energy industry companies.  I implement SCADA type software, working with various types of technical equipmentand advanced databases.</p>
-        <p>My duties include:</p>
-        <ol>
-            <p>Pre-implementation analysis. Definition of requirements, identification of customer needs, solution concept.</p>
-            <p>Creation of project documentation, from analysis through training materials, job instructions.</p>
-            <p>Implementation of network management software for power groups.</p>
-            <p>Installation and configuration of system and hardware based on requirements.</p>
-            <p>Working with relational databases.</p>
-            <p>Analyze, repair reported defects within the software implementation and service team.</p>
-            <p>Administration of Windows, Linux operating systems.</p>
-            <p>Providing technical support to customers.</p>
-        </ol>
-        <div class="work_right_info">
-            <h3>Where did I work before ?</h3>
-            <button onclick="window.location.href='https://www.patrykbala.com'">Check my web CV</button>
-        </div>
-    </section>
-
     <section class="skills">
-        <h1>03.My Skills</h1>
+        <h1 id="section-2">02.My Skills</h1>
         <div class="skills_container">
             <p class="">Check out my codes on: <a href="https://github.com/PatrykBala">GitHub</a>.</p>
             <p>... my web components: <a href="https://codepen.io/Patryk-Bala">Codepen</a>.</p>
@@ -177,8 +157,28 @@
           </div>
     </section>
 
+    <section class="work">
+        <h1 id="section-3">03.My Work</h1>
+        <p>I work as a Software Implementation and Support Specialist. I have experience with Linux and Windows systems, where I implement software written in Java and C++ to energy industry companies.  I implement SCADA type software, working with various types of technical equipmentand advanced databases.</p>
+        <p>My duties include:</p>
+        <ol>
+            <p>Pre-implementation analysis. Definition of requirements, identification of customer needs, solution concept.</p>
+            <p>Creation of project documentation, from analysis through training materials, job instructions.</p>
+            <p>Implementation of network management software for power groups.</p>
+            <p>Installation and configuration of system and hardware based on requirements.</p>
+            <p>Working with relational databases.</p>
+            <p>Analyze, repair reported defects within the software implementation and service team.</p>
+            <p>Administration of Windows, Linux operating systems.</p>
+            <p>Providing technical support to customers.</p>
+        </ol>
+        <div class="work_right_info">
+            <h3>Where did I work before ?</h3>
+            <button onclick="window.location.href='https://www.patrykbala.com'">Check my web CV</button>
+        </div>
+    </section>
+
     <section class="project">
-    <h1>04.My Projects</h1>
+    <h1 id="section-4">04.My Projects</h1>
     <div id="grid"><a>
         <div class="img"><span></span><span></span><span></span><span></span>
             <img src="img/DocumentNER.jpg"/></div>
@@ -204,7 +204,7 @@
     </section>
 
     <section class="contact">
-        <h1>05.Contact Me</h1>
+        <h1 id="section-5">05.Contact Me</h1>
         <h2>Leave a comment</h2>
         <p>My inbox is always open.</p>
         <a class="contact_button" href="mailto:patrykbala89@gmail.com">Send Mail</a> 

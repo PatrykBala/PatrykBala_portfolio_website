@@ -99,29 +99,13 @@ header nav ul li:hover {
 header nav ul li a{
   color: var(--icon-shake-color1);
   font-size: large;
-}
-
-/* Animation */
-.nav_text p {
-  animation: animated-text 4s steps(29,end) 1s 1 normal both,
-             animated-cursor 600ms steps(29,end) infinite;
-}
-
-/* text animation */
-@keyframes animated-text{
-  from{width: 0;}
-  to{width: 472px;}
-}
-
-/* cursor animations */
-@keyframes animated-cursor{
-  from{border-right-color: rgba(0,255,0,.75);}
-  to{border-right-color: transparent;}
+  text-decoration: none;
+  color: var(--icon-shake-color1);
 }
 
 /*start text (first section)*/
 .start_text {
-margin-top: 10%;
+margin-top: 13%;
 margin-left: 30%;
 }
 
@@ -207,7 +191,7 @@ margin-left: 30%;
 
 /*about*/
 .about {
-margin-top: 15%;
+margin-top: 10%;
 text-align: center;
 display: block;
 }
@@ -264,93 +248,17 @@ display: block;
   outline-offset: calc(var(--s) / -2);
 }
 
-/*work*/
-.work {
-  position: relative;
-  right: 30%;
-  text-align: center;
-}
-
-.work h1 {
-  position: relative;
-  z-index: 1;
-}
-
-.work h1:before{
-  border-top: 1px solid var(--text-shadow);
-  content: "";
-  margin: 0 auto; /* centers the line to the full width specified */
-  position: absolute; /* positioning must be absolute here */
-  top: 70%;
-  left: 30%;
-  right: 0%;
-  width: 50%;
-}
-
-.work p {
-  position: relative;
-  left: 35%;
-  text-align: justify;
-  width: 80%;
-}
-
-.work h3 {
-  margin-top: 5%;
-}
-
-.work .work_right_info {
-  position: relative;
-  left: 50%;
-}
-
-.work button, 
-.contact button{
-  padding: 15px 50px;
-  color: var(--text-grey);
-  position: relative;
-  float: bottom;
-  background: transparent;
-  border-color: var(--icon-shake-color1);
-}
-
-.work button::before,
-.contact button::before  {
-  content: '';
-  position: absolute;
-  bottom: 45%;
-  left: 20px;
-  width: 100%;
-  height: 1px;
-  background: var(--text-shadow);
-  display: inline-block;
-  transform-origin: right top;
-  transform: scale(0, 1);
-  transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
-}
-
-.work button:hover::before,
-.contact button:hover::before {
-  transform-origin: right top;
-  transform: scale(1, 1);
-}
-
 /*skills*/
-.skills {
-  margin-top: 15%;
-  position: relative;
-}
-
 .skills h1 {
   position: relative;
   left: 10%;
-  z-index: 1;
+  margin-top: -10%;
 }
 
 .skills h2, .skills p {
   position: relative;
   left: 10%;
 }
-
 
 .skills h1:before{
   border-top: 1px solid var(--text-shadow);
@@ -425,7 +333,7 @@ h2.third_column_title {
   position: relative; 
   font-style: normal;
   text-align: center;
-  top: -20px;
+  top: -30px;
 }
 
 .first_column_title, .second_column_title, .third_column_title {
@@ -440,6 +348,7 @@ h2.third_column_title {
   box-shadow: 0px 0px 10px 1px var(--skill-column-color1);
   text-emphasis: 0;
 }
+
 .second_column_line { 
   height: 3px; 
   margin: 2px 0; 
@@ -447,6 +356,7 @@ h2.third_column_title {
   position: absolute;
   box-shadow: 0px 0px 10px 1px var(--skill-column-color2);
 }
+
 .third_column_line { 
   height: 3px; 
   margin: 2px 0; 
@@ -474,9 +384,76 @@ h2.third_column_title {
 .prtg       {width:50%;}
 .postman    {width:40%;}
 
+/*work*/
+.work {
+  position: relative;
+  right: 30%;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.work h1 {
+  position: relative;
+  z-index: 1;
+}
+
+.work h1:before{
+  border-top: 1px solid var(--text-shadow);
+  content: "";
+  margin: 0 auto; /* centers the line to the full width specified */
+  position: absolute; /* positioning must be absolute here */
+  top: 70%;
+  left: 30%;
+  right: 0%;
+  width: 50%;
+}
+
+.work p {
+  position: relative;
+  left: 35%;
+  text-align: justify;
+  width: 80%;
+}
+
+.work .work_right_info {
+  position: relative;
+  left: 50%;
+}
+
+.work button, 
+.contact button{
+  padding: 15px 50px;
+  color: var(--text-grey);
+  position: relative;
+  float: bottom;
+  background: transparent;
+  border-color: var(--icon-shake-color1);
+}
+
+.work button::before,
+.contact button::before  {
+  content: '';
+  position: absolute;
+  bottom: 45%;
+  left: 20px;
+  width: 100%;
+  height: 1px;
+  background: var(--text-shadow);
+  display: inline-block;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+}
+
+.work button:hover::before,
+.contact button:hover::before {
+  transform-origin: right top;
+  transform: scale(1, 1);
+}
+
 /*project*/
 .project {
-  margin-top: 15%;
+  margin-top: 10%;
   position: relative;
   text-align: center;
 }
@@ -582,11 +559,12 @@ h2.third_column_title {
   font-size: 0.8rem;
   margin-top: 0.3rem;
   display: block;
+  margin-bottom: 15%;
 }
 
 /*contact*/
 .contact {
-  margin-top: 15%;
+  margin-top: 5%;
   position: relative;
   right: 30%;
   text-align: center;
@@ -594,13 +572,13 @@ h2.third_column_title {
 
 .contact h1 {
   position: relative;
-  left: 10%;
+  left: 20%;
   z-index: 1;
 }
 
 .contact h2, .contact p {
   position: relative;
-  left: 10%;
+  left: 30%;
 }
 
 .contact h1:before{
@@ -616,7 +594,7 @@ h2.third_column_title {
 
 .contact .contact_button {
   position: relative;
-  left: 10%;
+  left: 30%;
   text-decoration: none;
   background-color: transparent;
   color: var(--icon-shake-color1);
